@@ -1,22 +1,25 @@
 clear all
 close all
 clc
+addpath('/Users/u6021023/Box/Gait_VR DATA/APDM Phase 2');
 
-%% Add path but our test one is included for now
-%% addpath('PATH');
+%% load key
+id = '215';
 
-%% Imports
-import readOpalData_v2.*
-import filterIMU.*
+key = readtable(['/Users/u6021023/Box/Gait_VR DATA/APDM Phase 2/',id,'/MLK Walk_Trials.csv']); % Change to location of Walk trial summary sheet
 
-
+high = key(contains(key.TrialNotes,"High"),:);
+low = key(contains(key.TrialNotes,"Low"),:);
 turn = key(contains(key.TrialNotes,"Turn"),:);
+fast = key(contains(key.TrialNotes,"Fast"),:);
+
+%%
 
 start = 1;
 for ind=start:height(turn);%13;%190:201;%
     clear data filename trunk lumbar head lfoot rfoot Fs cIndex offsetA offsetV nDevices iSamples
     filename = char(turn.FileName(ind));
-    data = readOpalData_v2(TUG.h5);
+    data = readOpalData_v2(['C:\Users\u6021023\Box\Gait_VR DATA\APDM Phase 2\',id,'\rawData\',filename]);
     Fs = data.sampleRate;
     
     %% ========== ALIGN IMU AXES WITH GLOBAL FRAME AND FILTER ============ %%
@@ -60,13 +63,3 @@ for ind=start:height(turn);%13;%190:201;%
     
     disp(ind);
 end
-
-
-%data = readOpalData_v2('TUG.h5');
-
-%Fs = data.sampleRate;
-
-%aligned_opals = alignOpals(data,Fs);
-
-
-
