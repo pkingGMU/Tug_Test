@@ -2,16 +2,15 @@
 
 Patrick and Mackenzies
 
-Process Tug Data - (origin: google drive)
-
-1. Used Matlab function ('readOpalData_v2.m') to pull acceleration from tug data
-
 Compare gait speed/ turning velocity between single/dual task (animals)
 
+CURRENT BUILD:
+run main.m and choose the parent directory TUG DATA. (only select this one folder)
+Look for fileData as your ouptut
+fileData contains the file name/ext, the struct of output data (TurnV_Trunk/TurnV_Lumbar), and whether it came from Dual Task (DT) or Single Task (ST)
 
 
-Turning Velocity (Angular Velocity) 
-    1. Find angular velocity at start frame of turn
-    2. Find angular velocity at end frame of turn
-    3. 
+
+
+
 
