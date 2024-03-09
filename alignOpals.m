@@ -1,3 +1,5 @@
+
+
 function data = alignOpals(data,fsR)
 global fs;
 
@@ -14,16 +16,19 @@ global fs;
         for cDevice = 1:nDevices
             acc = [data.sensor(cDevice).acc.x' data.sensor(cDevice).acc.y' data.sensor(cDevice).acc.z'];
             g = [data.sensor(cDevice).gyro.x' data.sensor(cDevice).gyro.y' data.sensor(cDevice).gyro.z'];
-            accR = resample(acc, fsR, fs);
-            gR = resample(g .* 180/pi, fsR, fs);
-            [data.sensor(cDevice).acceleration,q] = RotateAcc(accR, fs*2.5);
-            data.sensor(cDevice).rotation = RotateVector(gR, q);
-            data.sensor(cDevice).accR.x = accR(:,1);
-            data.sensor(cDevice).gyroR.x = gR(:,1);
-            data.sensor(cDevice).accR.y = accR(:,2);
-            data.sensor(cDevice).gyroR.y = gR(:,2);
-            data.sensor(cDevice).accR.z = accR(:,3);
-            data.sensor(cDevice).gyroR.z = gR(:,3);
+            %ASK accR = idresamp(acc, fsR)
+            % ASK gR = idresamp(g .* 180/pi, fsR);
+            % ADD BACK RESAMPLE BELOW (acc -> accR)
+            [data.sensor(cDevice).acceleration,q] = RotateAcc(acc, fs*2.5);
+            % ADD BACK RESAMPLE BELOW (g -> gR)
+            data.sensor(cDevice).rotation = RotateVector(g, q);
+            % ADD BACK (acc-accR, g->gR)
+            data.sensor(cDevice).accR.x = acc(:,1);
+            data.sensor(cDevice).gyroR.x = g(:,1);
+            data.sensor(cDevice).accR.y = acc(:,2);
+            data.sensor(cDevice).gyroR.y = g(:,2);
+            data.sensor(cDevice).accR.z = acc(:,3);
+            data.sensor(cDevice).gyroR.z = g(:,3);
             
 %             for c = 1:3
 %                 data.sensor(cDevice).velocity(:,c) = integrateSig(data.sensor(cDevice).acceleration(:,c))/128;
