@@ -1,8 +1,8 @@
 # Tug_Test
 
-Patrick and Mackenzies
+Patrick/Mackenzie/Kelly
 
-Compare gait speed/ turning velocity between single/dual task (animals)
+Compare gait speed/ turning velocity between single/dual task (naming animals)
 
 CURRENT BUILD:
 run main.m and choose the parent directory TUG DATA. (only select this one folder)
