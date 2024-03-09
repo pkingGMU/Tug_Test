@@ -6,7 +6,7 @@
 
 Compare gait speed/turning velocity between single/dual task (naming animals)
 
-<li><span style="color: #007bff;">**CURRENT BUILD:** Run `main.m` and choose the parent directory `TUG DATA`. Only select this one folder. Look for `fileData` as your output. `fileData` contains the filename/extension, the struct of output data (`TurnV_Trunk`/`TurnV_Lumbar`), and whether it came from Dual Task (DT) or Single Task (ST).></li>
+<li><span style="color: #007bff;">**CURRENT BUILD:** Run `main.m` and choose the parent directory `TUG DATA`. Only select this one folder. Look for `fileData` as your output. `fileData` contains the filename/extension, the struct of output data (`TurnV_Trunk`/`TurnV_Lumbar`), and whether it came from Dual Task (DT) or Single Task (ST).</li>
 
 ## Instructions
 
