@@ -6,7 +6,7 @@
 
 Compare gait speed/turning velocity between single/dual task (naming animals)
 
-**CURRENT BUILD:** Run `main.m` and choose the parent directory `TUG DATA`. Only select this one folder. Look for `fileData` as your output. `fileData` contains the filename/extension, the struct of output data (`TurnV_Trunk`/`TurnV_Lumbar`), and whether it came from Dual Task (DT) or Single Task (ST).
+<li><span style="color: #007bff;">**CURRENT BUILD:** Run `main.m` and choose the parent directory `TUG DATA`. Only select this one folder. Look for `fileData` as your output. `fileData` contains the filename/extension, the struct of output data (`TurnV_Trunk`/`TurnV_Lumbar`), and whether it came from Dual Task (DT) or Single Task (ST)./></li>
 
 ## Instructions
 
@@ -18,7 +18,6 @@ Compare gait speed/turning velocity between single/dual task (naming animals)
 
 To make your README more visually appealing, you can use HTML/CSS to add colors and organize the content.
 
-```html
 <div style="background-color: #f0f0f0; padding: 10px;">
     <h3 style="color: #333;">Quick Tips</h3>
     <ul>
