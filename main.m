@@ -58,26 +58,25 @@ for i = 1:numel(allFiles)
             
         end
         
-        %% ============ SELECT FOOT, LUMBAR, TRUNK, HEAD IMU =========%%
-        for n=1:length(data.sensor)
-            if contains(data.sensor(n).monitorLabel,'Trunk') || contains(data.sensor(n).monitorLabel,'Sternum');
-                trunk = struct(data.sensor(n));
-            else if contains(data.sensor(n).monitorLabel,'Lumbar');
+        %% ============ SELECT FOOT, LUMBAR, TRUNK, HEAD IMU =========%
+        % Switch case to get the correct structures from the monitor labels
+        for n = 1:length(data.sensor)
+            switch true
+                case contains(data.sensor(n).monitorLabel, {'Trunk', 'Sternum'})
+                    trunk = struct(data.sensor(n));
+                case contains(data.sensor(n).monitorLabel, 'Lumbar')
                     lumbar = struct(data.sensor(n));
-                else if contains(data.sensor(n).monitorLabel,'Head') || contains(data.sensor(n).monitorLabel,'ForeHead') || contains(data.sensor(n).monitorLabel,'Head') || contains(data.sensor(n).monitorLabel,'Forehead');
-                        head = struct(data.sensor(n));
-                    else if contains(data.sensor(n).monitorLabel,'Right Foot');
-                            rfoot = struct(data.sensor(n));
-                        else if contains(data.sensor(n).monitorLabel,'Left Foot');
-                                lfoot = struct(data.sensor(n));
-                            end
-                        end
-                    end
-                end
+                case contains(data.sensor(n).monitorLabel, {'Head', 'Forehead', 'ForeHead'})
+                    head = struct(data.sensor(n));
+                case contains(data.sensor(n).monitorLabel, 'Right Foot')
+                    rfoot = struct(data.sensor(n));
+                case contains(data.sensor(n).monitorLabel, 'Left Foot')
+                    lfoot = struct(data.sensor(n));
             end
         end
-        
-    end
+     end
+    
+
     %turn.Pk_TurnV_Head(ind) = max(abs(head.rotation(:,3)));
     turn.Pk_TurnV_Trunk(filename) = max(abs(trunk.rotation(:,3)));
     turn.Pk_TurnV_Lumbar(filename) = max(abs(lumbar.rotation(:,3)));
@@ -103,12 +102,6 @@ end
 
 
 
-
-%data = readOpalData_v2('TUG.h5');
-
-%Fs = data.sampleRate;
-
-%aligned_opals = alignOpals(data,Fs);
 
 
 
