@@ -1,0 +1,33 @@
+function plot_data(struct, color, title_str)
+% struct should be our calculated data (calc struct)
+    
+    % Get field names of the struct
+    fields = fieldnames(struct);
+
+    % Calculate the number of datasets
+    num_datasets = numel(fields);
+
+    % Calculate the width of each box
+    box_width = 0.8 / num_datasets;
+
+    % Plot each dataset seperatley
+    hold on;
+    for jj = 1:numel(fields)
+        % Get our field names and get our array data from each field
+        fieldName = fields{jj};
+        arrayData = struct.(fieldName);
+
+        % Give each field a position on the graph
+        positions = jj + ((1:size(arrayData, 1)) - 0.5) * box_width - 0.4;
+
+        % Plot
+        boxchart(arrayData, 'Positions', positions);
+    end
+    hold off
+    
+    xlabel('Trial');
+    ylabel('Angular Velocity');
+    title('Title');
+    grid on;
+    
+end

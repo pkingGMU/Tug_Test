@@ -10,6 +10,8 @@ import readOpalData_v2.*
 import filterIMU.*
 import RotateAcc.*
 import RotateVector.*
+import calculations.*
+import plot_data.*
 
 %% **************Select Directory******************************************
 % Import using parent directory
@@ -78,8 +80,8 @@ for i = 1:numel(allFiles)
     
 
     %turn.Pk_TurnV_Head(ind) = max(abs(head.rotation(:,3)));
-    turn.Pk_TurnV_Trunk(filename) = max(abs(trunk.rotation(:,3)));
-    turn.Pk_TurnV_Lumbar(filename) = max(abs(lumbar.rotation(:,3)));
+    turn.Pk_TurnV_Trunk = max(abs(trunk.rotation(:,3)));
+    turn.Pk_TurnV_Lumbar = max(abs(lumbar.rotation(:,3)));
     
     % Extract just the filename and extension
     [~, filename, ext] = fileparts(filename);
@@ -100,6 +102,11 @@ for i = 1:numel(allFiles)
     end
 end
 
+% Troubleshooting
+calc.labeled_max_data = calculations(fileData);
+
+% Plotting raw data
+plot_data(calc.labeled_max_data)
 
 
 
