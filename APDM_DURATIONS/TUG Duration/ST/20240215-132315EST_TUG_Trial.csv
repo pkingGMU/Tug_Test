@@ -1,0 +1,29 @@
+"CSV.5 | Subject Group","Test"
+"Subject Public ID","PDT012"
+"Subject First Name",""
+"Subject Last Name",""
+"Subject Date of Birth",""
+"Record Date/Time","20240215-132315EST"
+"Condition","3m Walkway"
+"File Name","20240215-132315_TUG.h5"
+"Trial Notes",""
+"Analysis Log","Info::No sternum sensor found in recording. Lean angle will not be calculated."
+"Analysis Version","3"
+,,,,,"Iteration #"
+"Measure","Normative Mean","Normative StDev","Mean","StDev","1","2"
+"Duration (s)","8.76","2.30","6.14","0.00",,
+"Sit to Stand - Duration (s)","0.98","0.30","0.88","0.00","0.88",
+"Sit to Stand - Lean Angle (degrees)","32.62","12.35","","",,
+"Sit to Stand - N (#)","1","0","1","0",,
+"Stand to Sit - Duration (s)","0.77","0.18","0.61","0.00","0.61",
+"Stand to Sit - Lean Angle (degrees)","34.62","16.01","","",,
+"Stand to Sit - N (#)","1","0","1","0",,
+"Turns - Angle (degrees)","182.17","6.67","175.50","37.77","202.21","148.79"
+"Turns - Duration (s)","1.94","0.38","1.19","0.67","1.66","0.71"
+"Turns - N (#)","","","2","0",,
+"Turns - Turn Velocity (degrees/s)","230.56","49.29","337.41","71.21","287.06","387.76"
+
+"Event"
+"Turns - Turn (s)","","","","","6.141","8.977"
+"Sit to Stand - Sit to Stand (s)","","","","","3.953",
+"Stand to Sit - Stand to Sit (s)","","","","","9.484",

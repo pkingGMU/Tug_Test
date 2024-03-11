@@ -1,0 +1,29 @@
+"CSV.5 | Subject Group","Test"
+"Subject Public ID","PDTVR004"
+"Subject First Name",""
+"Subject Last Name",""
+"Subject Date of Birth",""
+"Record Date/Time","20231109-150313EST"
+"Condition","3m Walkway"
+"File Name","20231109-150313_TUG.h5"
+"Trial Notes","t1"
+"Analysis Log",""
+"Analysis Version","3"
+,,,,,"Iteration #"
+"Measure","Normative Mean","Normative StDev","Mean","StDev","1","2"
+"Duration (s)","8.76","2.30","9.13","0.00",,
+"Sit to Stand - Duration (s)","0.98","0.30","0.84","0.00","0.84",
+"Sit to Stand - Lean Angle (degrees)","32.62","12.35","38.29","0.00","38.29",
+"Sit to Stand - N (#)","1","0","1","0",,
+"Stand to Sit - Duration (s)","0.77","0.18","0.52","0.00","0.52",
+"Stand to Sit - Lean Angle (degrees)","34.62","16.01","36.60","0.00","36.60",
+"Stand to Sit - N (#)","1","0","1","0",,
+"Turns - Angle (degrees)","182.17","6.67","185.05","9.62","191.85","178.24"
+"Turns - Duration (s)","1.94","0.38","2.44","0.18","2.31","2.57"
+"Turns - N (#)","","","2","0",,
+"Turns - Turn Velocity (degrees/s)","230.56","49.29","217.38","52.96","179.93","254.82"
+
+"Event"
+"Turns - Turn (s)","","","","","7.031","10.148"
+"Sit to Stand - Sit to Stand (s)","","","","","3.664",
+"Stand to Sit - Stand to Sit (s)","","","","","12.266",

@@ -1,0 +1,29 @@
+"CSV.5 | Subject Group","Test"
+"Subject Public ID","PDT010"
+"Subject First Name",""
+"Subject Last Name",""
+"Subject Date of Birth",""
+"Record Date/Time","20231212-114156EST"
+"Condition","3m Walkway"
+"File Name","20231212-114156_TUG.h5"
+"Trial Notes",""
+"Analysis Log","Warning::Unable to find quiet segment at start of sternum recording"
+"Analysis Version","3"
+,,,,,"Iteration #"
+"Measure","Normative Mean","Normative StDev","Mean","StDev","1","2"
+"Duration (s)","8.76","2.30","10.51","0.00",,
+"Sit to Stand - Duration (s)","0.98","0.30","1.02","0.00","1.02",
+"Sit to Stand - Lean Angle (degrees)","32.62","12.35","20.50","0.00","20.50",
+"Sit to Stand - N (#)","1","0","1","0",,
+"Stand to Sit - Duration (s)","0.77","0.18","0.66","0.00","0.66",
+"Stand to Sit - Lean Angle (degrees)","34.62","16.01","25.52","0.00","25.52",
+"Stand to Sit - N (#)","1","0","1","0",,
+"Turns - Angle (degrees)","182.17","6.67","174.66","5.00","178.19","171.12"
+"Turns - Duration (s)","1.94","0.38","2.09","0.25","2.27","1.92"
+"Turns - N (#)","","","2","0",,
+"Turns - Turn Velocity (degrees/s)","230.56","49.29","163.82","28.04","143.99","183.64"
+
+"Event"
+"Turns - Turn (s)","","","","","4.750","8.609"
+"Sit to Stand - Sit to Stand (s)","","","","","0.586",
+"Stand to Sit - Stand to Sit (s)","","","","","10.430",
