@@ -73,7 +73,6 @@ def read_csv_file(parent_dir, subdirs):
 
 # Function to run our calculations
 def calculate(dataframe):
-    if 
     for column in dataframe.columns:
         if np.issubdtype(dataframe[column].dtype, np.number):
             mean_value = dataframe[column].mean()
@@ -105,8 +104,7 @@ def main():
     if diretory_info:
         parent_dir, subdirs = diretory_info
         info = read_csv_file(parent_dir, subdirs)
-        calculated = calculate(info)
-        write_to_excel(calculated)
+        write_to_excel(info)
 
 
     
