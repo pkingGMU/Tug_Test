@@ -16,7 +16,7 @@ function plot_data(struct, color, title_str)
     grid on;
 
     % Set y-axis limits to start at 0
-    ylim([0 500]);
+    ylim([0 1000]);
 
     subplot(1,2,2)
     subset1 = data(:, [3,4]);
@@ -29,6 +29,6 @@ function plot_data(struct, color, title_str)
     grid on;
 
     % Set y-axis limits to start at 0
-    ylim([0 500]);
+    ylim([0 1000]);
     
 end
