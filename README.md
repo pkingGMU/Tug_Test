@@ -8,11 +8,17 @@ Compare gait speed/turning velocity between single/dual task (naming animals)
 
 **CURRENT BUILD:** Run `main.m` and choose the parent directory `TUG DATA`. Only select this one folder. Look for `fileData` as your output. `fileData` contains the filename/extension, the struct of output data (`TurnV_Trunk`/`TurnV_Lumbar`), and whether it came from Dual Task (DT) or Single Task (ST).
 
-## Instructions
+## Instructions to get TUG Peak Turn Velocity Data
 
 1. Clone the repository.
 2. Run `main.m` and choose the parent directory `TUG DATA`.
-3. Look for `fileData` as your output.
+3. Look for `TUG_Data_CSV.csv`.
+
+## Instruction to get the TUG Timings
+
+1. Clone the repository
+2. Run `timings.py`
+3. Save excel file in Outputs folder
 
 ## Notes
 1. Look at `mechanical stability` - cognitive demands - associated with fall risk 
