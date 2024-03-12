@@ -110,7 +110,7 @@ calc.labeled_max_data = calculations(fileData);
 plot_data(calc.labeled_max_data)
 
 % Excel file
-Write_TUG_CSV(calc.labeled_max_data{1}, calc.labeled_max_data{2}, 'TUG_Data_CSV.csv');
+Write_TUG_CSV(c)
 
 
 
