@@ -36,6 +36,7 @@ monitorCaseIDs = {};
 sensors     = h5info(filename, '/Sensors');
 processed   = h5info(filename, '/Processed');
 nDevices    = length(sensors.Groups);
+annotations = h5info(filename, '/Annotations');
 
 for monitorIdx = 1:nDevices
     
@@ -98,4 +99,5 @@ end
 
 Opal.sampleRate = sampleRate;
 Opal.time = [0:length(data)-1]*(1/sampleRate);
+Opal.annotations = annotations;
 warning off all
