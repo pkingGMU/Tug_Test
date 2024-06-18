@@ -14,8 +14,11 @@ global fs;
         for cDevice = 1:nDevices
             acc = [data.sensor(cDevice).acc.x' data.sensor(cDevice).acc.y' data.sensor(cDevice).acc.z'];
             g = [data.sensor(cDevice).gyro.x' data.sensor(cDevice).gyro.y' data.sensor(cDevice).gyro.z'];
+   
             accR = resample(acc, fsR, fs);
+            % accR = acc;
             gR = resample(g .* 180/pi, fsR, fs);
+            % gR = g;
             % ADD BACK RESAMPLE BELOW (acc -> accR)
             [data.sensor(cDevice).acceleration,q] = RotateAcc(accR, fs*2.5);
             % ADD BACK RESAMPLE BELOW (g -> gR)

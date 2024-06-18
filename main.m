@@ -108,6 +108,58 @@ calc.labeled_max_data = calculations(fileData);
 
 % Plotting raw data
 plot_data(calc.labeled_max_data)
+%% 
+
+% Plotting raw data as Violin Plot
+subplot(1,2,1)
+violin(calc.labeled_max_data{1}(:,[1,2]))
+xlabel('Task Type');
+ylabel('Turning Speed (deg/s)');
+title('Peak Turning Speed');
+grid on;
+% Set y-axis limits to start at 0
+ylim([0 1000]);
+
+subplot(1,2,2)
+violin(calc.labeled_max_data{1}(:,[3,4]))
+xlabel('Task Type');
+ylabel('Turning Speed (deg/s)');
+title('Peak Turning Speed');
+grid on;
+% Set y-axis limits to start at 0
+ylim([0 1000]);
+
+%% 
+
+column_labels = calc.labeled_max_data{2};
+
+% Plotting raw data as Violin Plot
+subplot(1,2,1)
+csubset1 = column_labels(:, [1,2]);
+Violin_Processing(calc.labeled_max_data{1}(:,[1,2]), 'scattercolors', [1, .8, .2],'colors', [0 .4 .2],'violin', 'full', 'box', 0, 'scatter', 2, 'linkline', 0, 'withinlines', 1, 'xtlabels', csubset1)
+xlabel('Task Type');
+ylabel('Turning Speed (deg/s)');
+title('Peak Turning Speed');
+
+grid on;
+% Set y-axis limits to start at 0
+ylim([0 1000]);
+
+
+
+subplot(1,2,2)
+csubset2 = column_labels(:, [3,4]);
+Violin_Processing(calc.labeled_max_data{1}(:,[3,4]), 'scattercolors', [1, .8, .2],'colors', [0 .4 .2], 'violin', 'full', 'box', 0, 'scatter', 2, 'linkline', 0, 'withinlines', 1, 'xtlabels', csubset2)
+xlabel('Task Type');
+ylabel('Turning Speed (deg/s)');
+title('Peak Turning Speed');
+
+grid on;
+% Set y-axis limits to start at 0
+ylim([0 1000]);
+
+%% 
+
 
 % Excel file
 Write_TUG_CSV(calc.labeled_max_data{1}, calc.labeled_max_data{2}, 'TUG_Data_CSV.csv');
