@@ -129,34 +129,29 @@ grid on;
 % Set y-axis limits to start at 0
 ylim([0 1000]);
 
-%% 
+
+%%
+
+% THIS IS THE WORKING GRAPH CODE. RUN AS SECTION AFTER RUNNING THE FULL
+% SCRIPT
+fig = figure();
+groups = [ones(37,1); 2*ones(37,1)];  % Group 1 labeled as 1, Group 2 labeled as 2
+colors = [0 0.4 0.2; 1 0.8 0.2];
+
+Y = [calc.labeled_max_data{1}(:,1), calc.labeled_max_data{1}(:,2)];
 
 column_labels = calc.labeled_max_data{2};
-
-% Plotting raw data as Violin Plot
-subplot(1,2,1)
-csubset1 = column_labels(:, [1,2]);
-Violin_Processing(calc.labeled_max_data{1}(:,[1,2]), 'scattercolors', [1, .8, .2],'colors', [0 .4 .2],'violin', 'full', 'box', 0, 'scatter', 2, 'linkline', 0, 'withinlines', 1, 'xtlabels', csubset1)
+csubset2 = column_labels(:, [1,2]);
+Violin_Processing(mat2cell(Y, size(Y, 1), ones(1, size(Y, 2))), 'violinalpha', .7, 'colors', colors, 'groups', groups, 'scattercolors', [0, 0, 0], 'violin', 'full', 'box', 0, 'scatter', 2, 'linkline', 1, 'withinlines', 1, 'xtlabels', csubset2)
 xlabel('Task Type');
 ylabel('Turning Speed (deg/s)');
 title('Peak Turning Speed');
 
-grid on;
+grid off;
 % Set y-axis limits to start at 0
-ylim([0 1000]);
+ylim([0 500]);
+fontsize(fig, 40, "points")
 
-
-
-subplot(1,2,2)
-csubset2 = column_labels(:, [3,4]);
-Violin_Processing(calc.labeled_max_data{1}(:,[3,4]), 'scattercolors', [1, .8, .2],'colors', [0 .4 .2], 'violin', 'full', 'box', 0, 'scatter', 2, 'linkline', 0, 'withinlines', 1, 'xtlabels', csubset2)
-xlabel('Task Type');
-ylabel('Turning Speed (deg/s)');
-title('Peak Turning Speed');
-
-grid on;
-% Set y-axis limits to start at 0
-ylim([0 1000]);
 
 %% 
 
